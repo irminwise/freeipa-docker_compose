@@ -13,11 +13,11 @@ sudo chmod +x /usr/local/bin/docker-compose
 # if you change this, change the systemd service file to match
 # WorkingDirectory=[whatever you have below]
 sudo mkdir /srv/docker
-sudo curl -o /srv/docker/docker-compose.yml https://raw.githubusercontent.com/tblatrille/freeipa-docker-compose/main/docker-compose.yml
+sudo curl -o /srv/docker/docker-compose.yml https://raw.githubusercontent.com/tblatrille/freeipa-docker_compose/main/docker-compose.yml
 
 # copy in systemd unit file and register it so our compose file runs
 # on system restart
-sudo curl -o /etc/systemd/system/docker-compose-app.service https://raw.githubusercontent.com/tblatrille/freeipa-docker-compose/main/docker-compose-app.service
+sudo curl -o /etc/systemd/system/docker-compose-app.service https://raw.githubusercontent.com/tblatrille/freeipa-docker_compose/main/docker-compose-app.service
 systemctl enable docker-compose-app
 
 # start up the application via docker-compose
