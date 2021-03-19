@@ -1,1 +1,1 @@
-# freeipa-docker_compose
+# freeipa-docker-compose
