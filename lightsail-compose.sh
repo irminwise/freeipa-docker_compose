@@ -10,7 +10,7 @@ sudo apt-get --yes --force-yes install \
     gnupg \
     lsb-release
 
-sudo curl -sSL https://get.docker.com | sh
+sudo curl -sSL https://get.docker.com | sh  > docker_log.txt
 
 wait
 echo 'Finished Docker Install'
