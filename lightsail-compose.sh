@@ -13,7 +13,7 @@ sudo apt-get --yes --force-yes install \
 sudo curl -sSL https://get.docker.com | sh
 
 wait
-
+echo 'Finished Docker Install'
 sudo usermod -aG docker ubuntu
 
 # install docker-compose
@@ -35,4 +35,4 @@ sudo curl -o /etc/systemd/system/docker-compose-app.service https://raw.githubus
 systemctl enable docker-compose-app
 
 # start up the application via docker-compose
-docker-compose -f /srv/docker/docker-compose.yml up -d
+sudo -E docker-compose -f /srv/docker/docker-compose.yml up -d
