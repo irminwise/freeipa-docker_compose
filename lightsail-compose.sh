@@ -3,7 +3,7 @@
 # install latest version of docker the lazy way
 
 sudo apt-get update
-sudo apt-get install \
+sudo apt-get --yes --force-yes install \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -12,10 +12,14 @@ sudo apt-get install \
 
 sudo curl -sSL https://get.docker.com | sh
 
+wait
+
 sudo usermod -aG docker ubuntu
 
 # install docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.28.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+wait
 
 sudo chmod +x /usr/local/bin/docker-compose
 
